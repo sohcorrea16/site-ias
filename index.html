@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Inteligência Artificial — Guia Simples</title>
+  <meta name="description" content="Um site simples, criativo e sem direitos autorais sobre Inteligência Artificial: o que é, pontos positivos e negativos, e como usar com segurança." />
+  <style>
+    :root{
+      --bg:#fff7f5; --card:#ffffff; --accent:#ff6b3d; --muted:#5a4a43; --glass: rgba(255,240,235,0.6);
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(180deg,var(--bg),#eef6ff);color:#0b1b2b}
+    header{background:var(--accent);color:white;padding:28px 20px;text-align:center}
+    header h1{margin:0;font-size:clamp(1.6rem,3vw,2.4rem)}
+    header p{margin:6px 0 0;opacity:.95}
+
+    main{max-width:1000px;margin:24px auto;padding:16px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+    .card{background:var(--card);border-radius:14px;padding:18px;box-shadow:0 6px 20px rgba(13,30,80,0.06)}
+    .hero{display:flex;gap:18px;align-items:center}
+    .hero svg{width:120px;height:120px;flex:0 0 120px}
+    h2{margin-top:0}
+    p{line-height:1.5;color:var(--muted)}
+    ul{margin:8px 0 0;padding-left:1.2em}
+    li{margin-bottom:8px}
+    .buttons{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap}
+    .btn{background:var(--accent);color:white;padding:10px 14px;border-radius:10px;text-decoration:none;display:inline-block}
+    .secondary{background:transparent;border:1px solid #d6e4ff;color:var(--accent)}
+    footer{max-width:1000px;margin:18px auto 60px;padding:12px;text-align:center;color:var(--muted)}
+
+    /* accessibility */
+    .big{font-size:1.15rem}
+    .contrast{background:#0b2540;color:white;padding:12px;border-radius:10px}
+
+    /* small interactive styles */
+    .qa{margin-top:8px}
+    .qa input, .qa textarea{width:100%;padding:10px;margin-top:8px;border-radius:8px;border:1px solid #e3edf9}
+    .result{margin-top:10px;padding:10px;border-radius:8px;background:#f4fbff;border:1px solid #e1f0ff}
+
+    @media (max-width:520px){.hero{flex-direction:column;align-items:flex-start}.hero svg{width:100px;height:100px}}
+  </style>
+<body>
+  <header>
+    <div class="logo" style="display:flex;align-items:center;gap:10px;font-weight:700;font-size:1.4rem;letter-spacing:1px;margin-bottom:8px;">
+      <svg width="48" height="48" viewBox="0 0 120 120" aria-label="Logo profissional IA" role="img">
+  <defs>
+    <linearGradient id="pro1" x1="0" x2="1">
+      <stop offset="0" stop-color="#1e3c72"/>
+      <stop offset="1" stop-color="#2a5298"/>
+    </linearGradient>
+  </defs>
+  <circle cx="60" cy="60" r="54" fill="url(#pro1)"/>
+  <path d="M40 70 Q60 92 80 70" stroke="#ffffff" stroke-width="8" fill="none" stroke-linecap="round"/>
+  <circle cx="48" cy="48" r="8" fill="#ffffff"/>
+  <circle cx="72" cy="48" r="8" fill="#ffffff"/>
+  <path d="M60 20 L60 100" stroke="rgba(255,255,255,0.3)" stroke-width="4" stroke-linecap="round"/>
+  <path d="M20 60 L100 60" stroke="rgba(255,255,255,0.3)" stroke-width="4" stroke-linecap="round"/>
+</svg>
+      Sofia Correa — IA 
+    </div>
+    <h1>Inteligência Artificial — Guia simples e seguro</h1>
+    <p>Entenda o que é IA, seus benefícios, riscos e como usar com responsabilidade — linguagem clara para todas as idades.</p>
+  </header>
+
+  <main>
+    <section class="card hero" aria-labelledby="quem-e">
+      <!-- inline friendly SVG (royalty-free because drawn here) -->
+      <svg viewBox="0 0 120 120" role="img" aria-label="Ilustração de um robô simpático">
+        <defs>
+          <linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#8fc9ff"/><stop offset="1" stop-color="#6bb1ff"/></linearGradient>
+        </defs>
+        <rect x="10" y="28" width="100" height="70" rx="12" fill="url(#g)" />
+        <circle cx="60" cy="50" r="10" fill="#fff" />
+        <circle cx="60" cy="50" r="4" fill="#0b2540" />
+        <rect x="36" y="80" width="48" height="8" rx="4" fill="#0b2540" opacity="0.2"/>
+        <circle cx="36" cy="44" r="4" fill="#fff" opacity="0.9"/>
+        <circle cx="84" cy="44" r="4" fill="#fff" opacity="0.9"/>
+      </svg>
+
+      <div>
+        <h2 id="quem-e">O que é Inteligência Artificial?</h2>
+        <p class="big">Inteligência Artificial (IA) é um conjunto de técnicas que permite que máquinas realizem tarefas que normalmente precisam de inteligência humana — como reconhecer imagens, entender linguagem e tomar decisões simples.</p>
+        <div class="buttons">
+          <a class="btn" href="#positivos">Pontos positivos</a>
+          <a class="btn secondary" href="#negativos">Pontos negativos</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="grid">
+      <article class="card" id="positivos" aria-labelledby="pos">
+        <h2 id="pos">Pontos positivos</h2>
+        <p>IA pode ajudar em muitas áreas. Aqui estão exemplos fáceis de entender:</p>
+        <ul>
+          <li><strong>Saúde:</strong> ajuda a analisar exames e sugerir diagnósticos (com médico).</li>
+          <li><strong>Educação:</strong> cria exercícios personalizados e corrige tarefas.</li>
+          <li><strong>Tempo e rotina:</strong> automatiza tarefas repetitivas e sugere lembretes.</li>
+          <li><strong>Inclusão:</strong> reconhecimento de fala e tradução para pessoas com deficiência.</li>
+          <li><strong>Segurança:</strong> detecta fraudes e problemas em sistemas, quando bem usado.</li>
+        </ul>
+      </article>
+
+      <article class="card" id="negativos" aria-labelledby="neg">
+        <h2 id="neg">Pontos negativos</h2>
+        <p>IA também traz riscos e limitações que devemos conhecer:</p>
+        <ul>
+          <li><strong>Erros:</strong> pode interpretar algo errado — nem sempre está certa.</li>
+          <li><strong>Viés:</strong> se os dados têm preconceitos, a IA pode reproduzi-los.</li>
+          <li><strong>Privacidade:</strong> coleta de dados pode expor informações pessoais.</li>
+          <li><strong>Desemprego:</strong> automatização pode substituir algumas funções.</li>
+          <li><strong>Uso malicioso:</strong> pode ser usada para criar golpes ou desinformação.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="card" aria-labelledby="como-usar">
+      <h2 id="como-usar">Como usar a IA — guia prático</h2>
+      <p>Estas instruções servem para crianças, jovens e adultos. Siga sempre o bom senso.</p>
+
+      <h3>Passos simples</h3>
+      <ol>
+        <li><strong>Entenda o propósito:</strong> antes de usar, pergunte-se: "Para que preciso disso?"</li>
+        <li><strong>Verifique a fonte:</strong> use serviços confiáveis e leia a política de privacidade.</li>
+        <li><strong>Proteja seus dados:</strong> não forneça informações pessoais sensíveis (como senha, CPF, cartão).</li>
+        <li><strong>Cheque as respostas:</strong> valide informações importantes com uma pessoa ou fonte confiável.</li>
+        <li><strong>Use com responsabilidade:</strong> não gere ou compartilhe conteúdos que possam magoar ou enganar outras pessoas.</li>
+      </ol>
+
+      <h3>Dicas para crianças (em linguagem simples)</h3>
+      <p>Peça sempre a um adulto para ajudar. Pergunte: "Isso é verdade?" e não compartilhe sua senha.</p>
+
+      <h3>Dicas para professores e pais</h3>
+      <ul>
+        <li>Explique que a IA é uma ferramenta — não substitui aprendizado crítico.</li>
+        <li>Incentive projetos simples: fazer um chatbot com perguntas e respostas.</li>
+      </ul>
+
+      <div class="contrast" role="note">
+        <strong>Regra rápida:</strong> <span>se parecer arriscado, pare e pergunte a alguém de confiança.</span>
+      </div>
+    </section>
+
+    <section class="card" aria-labelledby="interativo">
+      <h2 id="interativo">Experimente aqui (offline)</h2>
+      <p>Use o pequeno simulador abaixo para ver como uma IA simples responde a perguntas. É só digitar e clicar em "Simular".</p>
+
+      <div class="qa">
+        <label for="q">Pergunta curta:</label>
+        <input id="q" aria-label="pergunta para simular" placeholder="Ex.: O que é um cachorro?"/>
+        <div class="buttons">
+          <button class="btn" id="run">Simular</button>
+          <button class="btn secondary" id="clear">Limpar</button>
+        </div>
+        <div id="out" class="result" role="status">Saiba: esta é uma resposta automática de exemplo e pode estar incompleta.</div>
+      </div>
+    </section>
+
+    <section class="card" aria-labelledby="recursos">
+      <h2 id="recursos">Recursos e atividades (sem custo)</h2>
+      <p>Atividades simples para aprender mais sobre IA:</p>
+      <ul>
+        <li>Desenhar o "robô do dia" e explicar o que ele faz.</li>
+        <li>Fazer pequenos testes de adivinhação (ex.: "qual comida gosto?") para entender acertos e erros.</li>
+        <li>Montar um quadro "prós e contras" com a turma ou família.</li>
+      </ul>
+      <p>Se quiser transformar isso em uma aula, use as perguntas no fim da página.</p>
+    </section>
+
+    <section class="card" aria-labelledby="perguntas">
+      <h2 id="perguntas">Perguntas para discussão (com respostas para professores)</h2>
+      <ol>
+        <li><strong>O que a IA faz melhor que humanos?</strong>
+          <div class="result">Tarefas repetitivas, analisar grandes quantidades de dados e identificar padrões rápidos.</div>
+        </li>
+        <li><strong>Quando não confiar totalmente na IA?</strong>
+          <div class="result">Em decisões que afetam vidas, finanças ou quando há risco de erro — sempre confira com humanos experts.</div>
+        </li>
+      </ol>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Crédito: design e imagens vetoriais criadas nesta página — sem direitos autorais (SVGs inline). <br/>Se quiser editar o conteúdo, copie este arquivo e salve como <code>index.html</code>.</p>
+    <p>Feito para todas as idades. 💡</p>
+  </footer>
+
+  <script>
+    // Simulador simples (exemplo educativo)
+    const run = document.getElementById('run');
+    const clear = document.getElementById('clear');
+    const q = document.getElementById('q');
+    const out = document.getElementById('out');
+
+    function simpleAnswer(text){
+      const t = text.trim().toLowerCase();
+      if(!t) return 'Escreva uma pergunta curta para ver uma resposta de exemplo.';
+      if(t.includes('o que') || t.includes('quem') || t.includes('como')){
+        if(t.includes('cachorro')) return 'Um cachorro é um animal de estimação, amigo do ser humano. Ele late e gosta de brincar.';
+        if(t.includes('ia') || t.includes('inteligencia')) return 'IA significa Inteligência Artificial: programas que aprendem padrões a partir de dados.';
+        return 'Boa pergunta! Esta é uma resposta simples — para saber mais, pesquise em livros ou pergunte a um professor.';
+      }
+      if(t.includes('por que')) return 'Porque muitas coisas têm causas diferentes; a IA tenta achar padrões para explicar alguns porquês.';
+      return 'Esta é uma resposta automática de exemplo. Confira com um adulto se a pergunta for importante.';
+    }
+
+    run.addEventListener('click', ()=>{
+      out.textContent = simpleAnswer(q.value);
+    });
+    clear.addEventListener('click', ()=>{q.value=''; out.textContent='Saiba: esta é uma resposta automática de exemplo e pode estar incompleta.'});
+  </script>
+</body>
+</html>
